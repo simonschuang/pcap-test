@@ -8,6 +8,10 @@ RUN apt-get update && \
     make \
     vim
 
+RUN mkdir -p /work
+ADD CMakeLists.txt /work
+ADD main.c /work
+
 WORKDIR /work
 
 CMD ["bash"]
